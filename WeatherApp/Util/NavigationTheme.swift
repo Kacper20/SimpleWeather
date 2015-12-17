@@ -13,13 +13,13 @@ enum NavigationTheme {
     case Normal
     case Hot
     case ExtremelyHot
-    case WhereTheHellAreYou
+    case WhereAreYou
     
     
     var statusBarStyle: UIStatusBarStyle {
         switch self {
         case .Normal, .Cold: return .Default
-        case .Hot, .ExtremelyHot, .WhereTheHellAreYou: return .LightContent
+        case .Hot, .ExtremelyHot, .WhereAreYou: return .LightContent
         }
     }
     
@@ -49,7 +49,7 @@ extension NavigationTheme {
         case 30..<100:
             self = .ExtremelyHot
         default:
-            self = .WhereTheHellAreYou
+            self = .WhereAreYou
         }
         
         

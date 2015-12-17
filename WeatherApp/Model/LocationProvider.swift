@@ -55,9 +55,14 @@ class LocationProvider: NSObject, CLLocationManagerDelegate {
     func startUpdatingLocation() {
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             locationManager.requestWhenInUseAuthorization()
+
+        }
+        else {
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             kCLLocationAccuracyNearestTenMeters
-            self.locationManager.distanceFilter = 100.0;
+            self.locationManager.distanceFilter = 1000.0;
+            self.locationManager.delegate = self
+            locationManager.startUpdatingLocation()
         }
     }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

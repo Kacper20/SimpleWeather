@@ -22,6 +22,8 @@
 		E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */; };
 		E7BFCD9E1C234E2A006D5431 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */; };
 		E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */; };
+		E7BFCDA31C235DC0006D5431 /* UINavigationBar+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */; };
+		E7BFCDA51C236132006D5431 /* WeatherItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTheme.swift; sourceTree = "<group>"; };
+		E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Theme.swift"; sourceTree = "<group>"; };
+		E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		E7BFCD5E1C233C76006D5431 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				E7BFCDA11C235D9A006D5431 /* Views */,
 				E7BFCD981C234A04006D5431 /* Util */,
 				E7BFCD951C234995006D5431 /* ViewControllers */,
 				E7BFCD8E1C233EC1006D5431 /* Model */,
@@ -193,6 +198,15 @@
 				E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		E7BFCDA11C235D9A006D5431 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */,
+				E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,7 +406,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */,
+				E7BFCDA31C235DC0006D5431 /* UINavigationBar+Theme.swift in Sources */,
 				E7BFCD971C2349A0006D5431 /* RootViewController.swift in Sources */,
+				E7BFCDA51C236132006D5431 /* WeatherItemViewModel.swift in Sources */,
 				E7BFCD941C2340A8006D5431 /* WeatherAPIClient.swift in Sources */,
 				E7BFCD601C233C76006D5431 /* AppDelegate.swift in Sources */,
 				E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */,
@@ -543,7 +559,7 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eu.proexe.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = harasim.kacper.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -556,7 +572,7 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eu.proexe.WeatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = harasim.kacper.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

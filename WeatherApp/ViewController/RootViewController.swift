@@ -23,6 +23,8 @@ class RootViewController: UIViewController, SegueHandlerType {
                 let vc = navVc.viewControllers.first as? WeatherProviderSettable else { fatalError("Wrong vc!!") }
             vc.weatherProvider = OpenWeatherItemProvider()
             
+    
+            
             
         }
     }

@@ -39,15 +39,19 @@ public struct OpenWeatherItem : WeatherItem {
 public struct OpenWeatherItemProvider: WeatherItemProvider {
     
     let baseOpenWeatherUrl = "http://api.openweathermap.org/data/2.5/"
+    let appId = "93164806d73e92a27299a82531c31aae"
+    
     public func getWeatherItemForLocation(location: GeoLocation, completion: (WeatherItem?, ErrorType?) -> Void) {
         let params: [String : AnyObject] = [
             "lat" : location.latitude,
-            "lon" : location.longitude
+            "lon" : location.longitude,
+            "appid" : appId
         ]
         WeatherAPIClient.getAPI(baseOpenWeatherUrl, endpoint: "weather", parameters: params).responseData { (response) -> Void in
             switch  response.result {
             case .Success(let valData):
                 let json = JSON(data: valData)
+                print(json)
                 let openWeatherItem = OpenWeatherItem(json: json)
                 completion(openWeatherItem, nil)
             case .Failure(let err):
