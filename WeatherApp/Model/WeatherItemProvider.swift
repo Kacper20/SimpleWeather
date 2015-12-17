@@ -31,11 +31,6 @@ public struct GeoLocation: CustomStringConvertible, Equatable {
     return lhs.longitude == rhs.longitude && lhs.latitude == rhs.latitude
 }
 
-
-
-
-
-
 public protocol WeatherItem {
     
     var location: GeoLocation { get }

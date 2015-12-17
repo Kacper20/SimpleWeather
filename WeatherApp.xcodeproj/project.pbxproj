@@ -20,6 +20,8 @@
 		E7BFCD971C2349A0006D5431 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD961C2349A0006D5431 /* RootViewController.swift */; };
 		E7BFCD9A1C234A1D006D5431 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD991C234A1D006D5431 /* SegueHandlerType.swift */; };
 		E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */; };
+		E7BFCD9E1C234E2A006D5431 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */; };
+		E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		E7BFCD961C2349A0006D5431 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E7BFCD991C234A1D006D5431 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
+		E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				E7BFCD8F1C233ED3006D5431 /* WeatherItemProvider.swift */,
 				E7BFCD911C233FEF006D5431 /* OpenWeatherItemProvider.swift */,
 				E7BFCD931C2340A8006D5431 /* WeatherAPIClient.swift */,
+				E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BFCD991C234A1D006D5431 /* SegueHandlerType.swift */,
+				E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -385,11 +391,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */,
 				E7BFCD971C2349A0006D5431 /* RootViewController.swift in Sources */,
 				E7BFCD941C2340A8006D5431 /* WeatherAPIClient.swift in Sources */,
 				E7BFCD601C233C76006D5431 /* AppDelegate.swift in Sources */,
 				E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */,
 				E7BFCD901C233ED3006D5431 /* WeatherItemProvider.swift in Sources */,
+				E7BFCD9E1C234E2A006D5431 /* LocationProvider.swift in Sources */,
 				E7BFCD9A1C234A1D006D5431 /* SegueHandlerType.swift in Sources */,
 				E7BFCD921C233FEF006D5431 /* OpenWeatherItemProvider.swift in Sources */,
 			);
