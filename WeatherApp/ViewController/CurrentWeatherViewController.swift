@@ -79,10 +79,17 @@ class CurrentWeatherViewController: UIViewController, WeatherProviderSettable, L
                 self.stackView.hidden = false
             }
             else {
+
+                self.presentAlert("Error", description: "Error has occured during downloading data from the internet")
                 
 
             }
         }
+    }
+    func presentAlert(title: String, description: String) {
+        let alert = UIAlertController(title: title, message: description, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     /// Data population section
