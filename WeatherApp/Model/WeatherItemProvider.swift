@@ -8,33 +8,17 @@
 
 import Foundation
 
-
-
-
-
-public struct GeoLocation: CustomStringConvertible, Equatable {
-        
-        var longitude: Double
-        var latitude: Double
-        init(longitude: Double, latitude: Double){
-            self.longitude = longitude
-            self.latitude = latitude
-        }
+//Protocol describes that every WeatherProvider should give WeatherData for specified location
+public protocol WeatherItemProvider {
     
-        public var description: String {
-            get {
-                return "longitude: \(self.longitude), latitude: \(self.latitude)\n"
-            }
-        }
-    }
-    public func ==(lhs: GeoLocation, rhs: GeoLocation) -> Bool {
-    return lhs.longitude == rhs.longitude && lhs.latitude == rhs.latitude
+    func getWeatherItemForLocation(location: GeoLocation, completion: (WeatherItem?, ErrorType?) -> Void)
 }
-
+//Protocol that describes what properties each WeatherItem should minimally have.
 public protocol WeatherItem {
     
     var location: GeoLocation { get }
     var temperature: Double { get }
+    var description: String { get }
     var temperatureMin: Double { get }
     var temperatureMax: Double { get }
     var humidity: Double { get }
@@ -42,8 +26,4 @@ public protocol WeatherItem {
     
 }
 
-public protocol WeatherItemProvider {
-    
-    
-    func getWeatherItemForLocation(location: GeoLocation, completion: (WeatherItem?, ErrorType?) -> Void)
-}
+

@@ -18,6 +18,7 @@ public struct OpenWeatherItem : WeatherItem {
     public let temperatureMax: Double
     public let humidity: Double
     public let pressure: Double
+    public let description: String
     
     init(json: JSON) {
         
@@ -31,6 +32,12 @@ public struct OpenWeatherItem : WeatherItem {
         self.temperatureMax = main["temp_max"].doubleValue
         self.humidity = main["humidity"].doubleValue
         self.pressure = main["pressure"].doubleValue
+        let arr = json["weather"].arrayValue
+        self.description = { _ -> String in
+            guard let first = arr.first else { return "" }
+            return first["description"].stringValue
+        }()
+
     }
     
 }
@@ -45,7 +52,8 @@ public struct OpenWeatherItemProvider: WeatherItemProvider {
         let params: [String : AnyObject] = [
             "lat" : location.latitude,
             "lon" : location.longitude,
-            "appid" : appId
+            "appid" : appId,
+            "units" : "metric"
         ]
         WeatherAPIClient.getAPI(baseOpenWeatherUrl, endpoint: "weather", parameters: params).responseData { (response) -> Void in
             switch  response.result {

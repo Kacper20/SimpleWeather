@@ -16,7 +16,6 @@ public struct LocationDescriptor {
     let country: String
 
 }
-
 extension LocationDescriptor {
     init(placemark: CLPlacemark) {
         self.country = placemark.country ?? ""
@@ -36,7 +35,9 @@ protocol LocationProviderDelegate: class {
     func locationProviderDidGetLocationWithDescription(location: GeoLocation, description: LocationDescriptor)
     func locationProviderDidFailGettingLocation(locationError: LocationProviderError)
 }
-class LocationProvider: NSObject, CLLocationManagerDelegate {
+//Location provider - basic class that takes responsibility for getting user location, and converting geographical location to meaningful address data.
+
+final class LocationProvider: NSObject, CLLocationManagerDelegate {
     
     
     weak var delegate: LocationProviderDelegate?
@@ -79,7 +80,6 @@ class LocationProvider: NSObject, CLLocationManagerDelegate {
         }
         
     }
-    
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
     }

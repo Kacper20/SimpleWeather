@@ -22,8 +22,10 @@
 		E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */; };
 		E7BFCD9E1C234E2A006D5431 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */; };
 		E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */; };
-		E7BFCDA31C235DC0006D5431 /* UINavigationBar+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */; };
 		E7BFCDA51C236132006D5431 /* WeatherItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */; };
+		E7C6CCCE1C2373F3009EB410 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CCCD1C2373F3009EB410 /* UIImage.swift */; };
+		E7C6CCD01C237AD1009EB410 /* NavbarRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CCCF1C237AD1009EB410 /* NavbarRoundedView.swift */; };
+		E7C6CCD21C2384AA009EB410 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CCD11C2384AA009EB410 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +69,10 @@
 		E7BFCD9B1C234AD5006D5431 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTheme.swift; sourceTree = "<group>"; };
-		E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Theme.swift"; sourceTree = "<group>"; };
 		E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherItemViewModel.swift; sourceTree = "<group>"; };
+		E7C6CCCD1C2373F3009EB410 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		E7C6CCCF1C237AD1009EB410 /* NavbarRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarRoundedView.swift; sourceTree = "<group>"; };
+		E7C6CCD11C2384AA009EB410 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 				E7BFCD911C233FEF006D5431 /* OpenWeatherItemProvider.swift */,
 				E7BFCD931C2340A8006D5431 /* WeatherAPIClient.swift */,
 				E7BFCD9D1C234E2A006D5431 /* LocationProvider.swift */,
+				E7C6CCD11C2384AA009EB410 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			children = (
 				E7BFCD991C234A1D006D5431 /* SegueHandlerType.swift */,
 				E7BFCD9F1C235756006D5431 /* NavigationTheme.swift */,
+				E7C6CCCD1C2373F3009EB410 /* UIImage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -203,8 +209,8 @@
 		E7BFCDA11C235D9A006D5431 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7BFCDA21C235DC0006D5431 /* UINavigationBar+Theme.swift */,
 				E7BFCDA41C236132006D5431 /* WeatherItemViewModel.swift */,
+				E7C6CCCF1C237AD1009EB410 /* NavbarRoundedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,14 +412,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BFCDA01C235756006D5431 /* NavigationTheme.swift in Sources */,
-				E7BFCDA31C235DC0006D5431 /* UINavigationBar+Theme.swift in Sources */,
+				E7C6CCD01C237AD1009EB410 /* NavbarRoundedView.swift in Sources */,
 				E7BFCD971C2349A0006D5431 /* RootViewController.swift in Sources */,
 				E7BFCDA51C236132006D5431 /* WeatherItemViewModel.swift in Sources */,
 				E7BFCD941C2340A8006D5431 /* WeatherAPIClient.swift in Sources */,
 				E7BFCD601C233C76006D5431 /* AppDelegate.swift in Sources */,
+				E7C6CCD21C2384AA009EB410 /* Location.swift in Sources */,
 				E7BFCD9C1C234AD5006D5431 /* CurrentWeatherViewController.swift in Sources */,
 				E7BFCD901C233ED3006D5431 /* WeatherItemProvider.swift in Sources */,
 				E7BFCD9E1C234E2A006D5431 /* LocationProvider.swift in Sources */,
+				E7C6CCCE1C2373F3009EB410 /* UIImage.swift in Sources */,
 				E7BFCD9A1C234A1D006D5431 /* SegueHandlerType.swift in Sources */,
 				E7BFCD921C233FEF006D5431 /* OpenWeatherItemProvider.swift in Sources */,
 			);

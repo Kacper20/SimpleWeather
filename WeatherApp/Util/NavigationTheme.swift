@@ -15,24 +15,15 @@ enum NavigationTheme {
     case ExtremelyHot
     case WhereAreYou
     
-    
-    var statusBarStyle: UIStatusBarStyle {
-        switch self {
-        case .Normal, .Cold: return .Default
-        case .Hot, .ExtremelyHot, .WhereAreYou: return .LightContent
-        }
-    }
-    
-    var barTintColor: UIColor? {
-        return nil
-    }
-    
-    var titleTextAttributes: [String: NSObject]? {
-        return nil
-    }
-    
+
     var tintColor: UIColor? {
-        return nil
+        switch self {
+        case .Cold: return UIColor(red:0.51, green:0.72, blue:0.91, alpha:1)
+        case .Normal: return UIColor(red:0.18, green:0.24, blue:0.32, alpha:1)
+        case .Hot:  return  UIColor(red:0.91, green:0.5, blue:0.18, alpha:1)
+        case .ExtremelyHot: return UIColor(red:0.91, green:0.3, blue:0.24, alpha:1)
+        case .WhereAreYou:  return UIColor(red:0.18, green:0.24, blue:0.32, alpha:1)
+        }
     }
 }
 
