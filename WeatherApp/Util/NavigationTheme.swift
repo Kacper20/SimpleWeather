@@ -18,7 +18,7 @@ enum NavigationTheme {
 
     var tintColor: UIColor? {
         switch self {
-        case .Cold: return UIColor(red:0.51, green:0.72, blue:0.91, alpha:1)
+        case .Cold: return UIColor(red:0.93, green:0.95, blue:0.95, alpha:1)
         case .Normal: return UIColor(red:0.18, green:0.24, blue:0.32, alpha:1)
         case .Hot:  return  UIColor(red:0.91, green:0.5, blue:0.18, alpha:1)
         case .ExtremelyHot: return UIColor(red:0.91, green:0.3, blue:0.24, alpha:1)
