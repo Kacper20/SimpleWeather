@@ -10,8 +10,8 @@ import Foundation
 
 //Created to not expose source of location(don't want anything that location provider depend on CoreLocation)
 public struct GeoLocation: Equatable {
-    var longitude: Double
-    var latitude: Double
+    let longitude: Double
+    let latitude: Double
     init(longitude: Double, latitude: Double){
         self.longitude = longitude
         self.latitude = latitude
